@@ -27,10 +27,10 @@ const resolvers = {
         const token = signToken(user);
         return token
       },
-      addUser: async(parent, {email, password}) => {
+      addUser: async(parent, {username, password}) => {
         const user = await User.create(
           {
-            email: email,
+            email: username,
             password: password
           }
         ),
